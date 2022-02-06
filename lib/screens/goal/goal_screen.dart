@@ -1,4 +1,5 @@
 import 'package:fitness_1/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -73,7 +74,7 @@ class GoalScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       elevation: 1,
                       onPressed: () {},
-                      child: const Icon(MdiIcons.arrowLeftThin),
+                      child: const Icon(CupertinoIcons.back),
                     ),
                     const Spacer(),
                     RawMaterialButton(
@@ -86,7 +87,7 @@ class GoalScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       elevation: 1,
                       onPressed: () {},
-                      child: const Icon(MdiIcons.dotsGrid),
+                      child: const Icon(Icons.more_vert),
                     ),
                   ],
                 ),
@@ -202,7 +203,7 @@ class Progress extends StatelessWidget {
                             fontSize: 20,
                           ),
                         ),
-                        const Icon(MdiIcons.arrowRight)
+                        const Icon(CupertinoIcons.forward)
                       ],
                     ),
                   ],
@@ -252,7 +253,7 @@ class Progress extends StatelessWidget {
                         percent: 0.01,
                         center: const Center(
                           child: Icon(
-                            MdiIcons.cup,
+                            FontAwesomeIcons.trophy,
                             color: Colors.amber,
                             size: 20,
                           ),
@@ -352,8 +353,11 @@ class ProgramSchedule extends StatelessWidget {
                                         fontSize: 20,
                                       ),
                                     )
-                                  : const Icon(Icons.cloud_upload,
-                                      color: Colors.amber),
+                                  : const Icon(
+                                      FontAwesomeIcons.trophy,
+                                      color: Colors.amber,
+                                      size: 20,
+                                    ),
                             ),
                             const SizedBox(width: 5),
                             if ((idx + 1) % 4 != 0)
