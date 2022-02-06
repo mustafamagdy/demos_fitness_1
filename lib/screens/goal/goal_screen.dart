@@ -270,6 +270,7 @@ class Progress extends StatelessWidget {
 }
 
 class ProgramSchedule extends StatelessWidget {
+  final weeks = 4;
   const ProgramSchedule({
     Key? key,
   }) : super(key: key);
@@ -296,7 +297,7 @@ class ProgramSchedule extends StatelessWidget {
           ),
         ),
         child: ListView.builder(
-          itemCount: 7,
+          itemCount: weeks,
           itemBuilder: (ctx, index) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -319,9 +320,11 @@ class ProgramSchedule extends StatelessWidget {
                           color: Colors.amber,
                           fontSize: 20,
                         ),
-                        children: const [
+                        children: [
                           TextSpan(
-                              text: '/7', style: TextStyle(color: Colors.grey)),
+                            text: '/$weeks',
+                            style: const TextStyle(color: Colors.grey),
+                          ),
                         ],
                       ),
                     ),
