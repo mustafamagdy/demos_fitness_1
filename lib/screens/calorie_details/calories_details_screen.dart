@@ -1,11 +1,10 @@
-import 'package:dotted_border/dotted_border.dart';
-import 'package:fitness_1/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:math' as math;
 
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
+import '../../constants.dart';
+import '../../widgets/score_widget.dart';
 
 class CaloriesDetailsScreen extends StatelessWidget {
   const CaloriesDetailsScreen({Key? key}) : super(key: key);
@@ -15,7 +14,7 @@ class CaloriesDetailsScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final activitySectionWidth = (size.width - kDefaultPadding * 5) / 3;
     var height = size.height;
-    final centerWidgetSize = 240.0;
+    const centerWidgetSize = 240.0;
     var appBar = AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
@@ -119,63 +118,7 @@ class CaloriesDetailsScreen extends StatelessWidget {
                 color: const Color(0xFFFFF5E0),
                 borderRadius: BorderRadius.circular(centerWidgetSize / 2),
               ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  CircularPercentIndicator(
-                    animation: true,
-                    startAngle: 90.0,
-                    circularStrokeCap: CircularStrokeCap.round,
-                    backgroundColor: const Color(0xFFFFEFC7),
-                    progressColor: const Color(0xFFFCBB1C),
-                    radius: (centerWidgetSize / 2) - (kDefaultPadding / 2),
-                    lineWidth: 15.0,
-                    percent: 0.78,
-                    center: DottedBorder(
-                      color: const Color(0xFFFFE8B1),
-                      borderType: BorderType.Circle,
-                      dashPattern: const [6, 10],
-                      strokeWidth: 4,
-                      radius: Radius.circular(centerWidgetSize / 2),
-                      strokeCap: StrokeCap.round,
-                      child: SizedBox(
-                        width: centerWidgetSize * .7,
-                        height: centerWidgetSize * .7,
-                        // padding: const EdgeInsets.all(kDefaultPadding),
-
-                        child: Padding(
-                          padding: const EdgeInsets.all(kDefaultPadding),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                FontAwesomeIcons.fire,
-                                color: Colors.amber,
-                                size: 32,
-                              ),
-                              Text(
-                                '156',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 26,
-                                ),
-                              ),
-                              Text(
-                                'Calories',
-                                style: TextStyle(
-                                  color: kLightGrey,
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              child: const ScoreWidget(size: centerWidgetSize),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
