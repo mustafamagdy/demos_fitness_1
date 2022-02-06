@@ -108,21 +108,22 @@ class Progress extends StatelessWidget {
                       ],
                     ),
                     CircularPercentIndicator(
-                        animation: true,
-                        startAngle: 90.0,
-                        circularStrokeCap: CircularStrokeCap.round,
-                        backgroundColor: Colors.grey.withOpacity(0.2),
-                        progressColor: Colors.deepOrange,
-                        radius: 20.0,
-                        lineWidth: 2.0,
-                        percent: 0.01,
-                        center: const Center(
-                          child: Icon(
-                            FontAwesomeIcons.trophy,
-                            color: Colors.amber,
-                            size: 20,
-                          ),
-                        )),
+                      animation: true,
+                      startAngle: 90.0,
+                      circularStrokeCap: CircularStrokeCap.round,
+                      backgroundColor: Colors.grey.withOpacity(0.2),
+                      progressColor: Colors.deepOrange,
+                      radius: 20.0,
+                      lineWidth: 2.0,
+                      percent: 0.01,
+                      center: const Center(
+                        child: Icon(
+                          FontAwesomeIcons.trophy,
+                          color: Colors.amber,
+                          size: 20,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               )

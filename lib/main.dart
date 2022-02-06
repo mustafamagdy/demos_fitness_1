@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/goal/goal_screen.dart';
-import 'screens/home/home_screen.dart';
+import 'screens/calories_details_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         primarySwatch: Colors.blue,
       ),
-      home: const GoalScreen(),
+      home: const CaloriesDetailsScreen(),
     );
   }
 }
