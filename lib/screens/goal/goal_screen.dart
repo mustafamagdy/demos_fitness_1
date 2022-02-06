@@ -361,7 +361,11 @@ class ProgramSchedule extends StatelessWidget {
                             ),
                             const SizedBox(width: 5),
                             if ((idx + 1) % 4 != 0)
-                              const Icon(Icons.arrow_right),
+                              const Icon(
+                                CupertinoIcons.forward,
+                                color: kLightGrey,
+                                size: 20,
+                              ),
                           ],
                         ),
                       );
