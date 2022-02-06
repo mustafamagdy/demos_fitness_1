@@ -13,9 +13,9 @@ class CaloriesDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final activitySectionWidth = (size.width - kDefaultPadding * 3) / 3;
+    final activitySectionWidth = (size.width - kDefaultPadding * 5) / 3;
     var height = size.height;
-    final centerWidgetSize = 250.0;
+    final centerWidgetSize = 240.0;
     var appBar = AppBar(
       backgroundColor: Colors.white,
       elevation: 0,
@@ -236,7 +236,7 @@ class CaloriesDetailsScreen extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: kLightGrey,
-                              fontSize: 14,
+                              fontSize: 12,
                             ),
                           ),
                           Text(
@@ -244,12 +244,12 @@ class CaloriesDetailsScreen extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.purpleAccent,
-                              fontSize: 14,
+                              fontSize: 12,
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: kDefaultPadding / 3),
+                      const SizedBox(height: kDefaultPadding / 2),
                       Stack(
                         children: [
                           Container(
@@ -290,7 +290,7 @@ class CaloriesDetailsScreen extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: kLightGrey,
-                              fontSize: 14,
+                              fontSize: 12,
                             ),
                           ),
                           Text(
@@ -298,12 +298,12 @@ class CaloriesDetailsScreen extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.deepOrangeAccent,
-                              fontSize: 14,
+                              fontSize: 12,
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: kDefaultPadding / 3),
+                      const SizedBox(height: kDefaultPadding / 2),
                       Stack(
                         children: [
                           Container(
@@ -344,7 +344,7 @@ class CaloriesDetailsScreen extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: kLightGrey,
-                              fontSize: 14,
+                              fontSize: 12,
                             ),
                           ),
                           Text(
@@ -352,12 +352,12 @@ class CaloriesDetailsScreen extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.deepPurpleAccent,
-                              fontSize: 14,
+                              fontSize: 12,
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: kDefaultPadding / 3),
+                      const SizedBox(height: kDefaultPadding / 2),
                       Stack(
                         children: [
                           Container(
